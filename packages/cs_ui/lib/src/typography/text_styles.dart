@@ -19,8 +19,9 @@ class CsTextStyle {
   /// Headline 2 Text Style
   static TextStyle get headline2 {
     return _textStyle.copyWith(
+      color: CsColors.white,
       fontSize: 30,
-      fontWeight: CsFontWeight.regular,
+      fontWeight: CsFontWeight.light,
     );
   }
 

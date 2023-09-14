@@ -25,17 +25,29 @@ class CreateWalletPage extends StatelessWidget {
                 onPressed: () {},
               ),
               SizedBox(height: context.minBlockVertical),
-              TextButton(
+
+              ElevatedButton(
                 onPressed: () {},
-                child: Text(
-                  'I already have a wallet',
-                  style: CsTextStyle.caption.copyWith(
-                    color: CsColors.primary,
-                    fontSize: 14,
-                    fontWeight: CsFontWeight.medium,
+                style: ElevatedButton.styleFrom(
+                  shadowColor: Colors.green,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
                   ),
                 ),
+                child: const Text('I already have a wallet'),
               ),
+
+              // ElevatedButton(
+              //   onPressed: () {},
+              //   child: Text(
+              //     'I already have a wallet',
+              //     style: CsTextStyle.caption.copyWith(
+              //       color: CsColors.primary,
+              //       fontSize: 14,
+              //       fontWeight: CsFontWeight.medium,
+              //     ),
+              //   ),
+              // ),
             ],
           ),
         ),

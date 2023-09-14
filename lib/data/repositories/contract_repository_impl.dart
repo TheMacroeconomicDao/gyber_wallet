@@ -23,7 +23,7 @@ class ContractRepositoryImpl extends ContractRepository {
   final StreamController<EtherAmount> _ethBalanceController =
       StreamController<EtherAmount>();
 
-  // ContractEvent _transferEvent() => _contract.event('Transfer');
+  //ContractEvent _transferEvent() => _contract.event('Transfer');
   // ContractFunction _balanceFunction() => _contract.function('balanceOf');
   // ContractFunction _tokenSymbol() => _contract.function('symbol');
   // ContractFunction _tokenDecimals() => _contract.function('decimals');

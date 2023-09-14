@@ -65,6 +65,7 @@ class _App extends StatelessWidget {
       // ],
       // supportedLocales: AppLocalizations.supportedLocales,
       initialRoute: WalletPages.splash,
+      // initialRoute: WalletPages.splash,
       onGenerateRoute: AppRouter.onRouteGenerate,
     );
   }

@@ -32,6 +32,7 @@ apply plugin: 'kotlin-android'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 
 android {
+     
     compileSdkVersion flutter.compileSdkVersion
 
     compileOptions {
@@ -48,9 +49,13 @@ android {
     }
 
     defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode flutterVersionCode.toInteger()
+        versionName flutterVersionName
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId "com.example.verygoodcore.crypto_wallet"
-        minSdkVersion flutter.minSdkVersion
+        //applicationId "com.example.verygoodcore.crypto_wallet"
+        
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
@@ -101,10 +106,10 @@ android {
 
     buildTypes {
         release {
-            signingConfig signingConfigs.release
+            shrinkResources true
             minifyEnabled true
-            useProguard true
-            proguardFiles getDefaultProguardFile('proguard-android.txt')
+            proguardFiles getDefaultProguardFile('proguard-android.txt'),
+                    'proguard-rules.pro'
         }
         debug {
             signingConfig signingConfigs.debug

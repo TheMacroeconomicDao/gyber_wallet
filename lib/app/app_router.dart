@@ -11,9 +11,9 @@ import 'package:flutter/material.dart';
 // Class containing constants representing the various routes available in the application.
 class WalletPages {
   static const String splash = '/';
-  static const String createPin = '/auth/create/pin';
-  static const String authLanding = '/auth/landing';
   static const String createWallet = '/auth/create/wallet';
+  static const String authLanding = '/auth/landing';
+  static const String createPin = '/auth/create/pin';
   static const String consent = '/auth/consent';
   static const String seedPhrase = '/auth/seedPhrase';
   static const String home = '/home';
