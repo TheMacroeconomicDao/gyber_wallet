@@ -1,12 +1,8 @@
-<<<<<<< HEAD
+
 # Crypto Wallet
 
-![coverage][coverage_badge]
-[![style: very good analysis][very_good_analysis_badge]][very_good_analysis_link]
-[![style: very good analysis][very_good_analysis_badge]]
-=======
 # Gyber Wallet
->>>>>>> 638b6db (Customize)
+
 
 
 
