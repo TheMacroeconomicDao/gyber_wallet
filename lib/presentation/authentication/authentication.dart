@@ -1,4 +1,4 @@
-export 'consent/consent.dart';
+export 'import_wallet/import_wallet.dart';
 export 'create_pin/create_pin.dart';
 export 'create_wallet/create_wallet.dart';
 export 'landing/landing.dart';

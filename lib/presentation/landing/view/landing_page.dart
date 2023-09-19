@@ -37,6 +37,7 @@ class LandingPage extends StatelessWidget {
               ),
               SizedBox(height: context.minBlockVertical * 5),
               SolidButton(
+                elevation: 0.3,
                 radius: 10,
                 text: 'Create a new Wallet',
                 onPressed: () => context.push(WalletPages.seedPhrase),
@@ -61,7 +62,7 @@ class LandingPage extends StatelessWidget {
               //     child: const Center(child: Text('I already have a wallet')))
               //
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () => context.push(WalletPages.import),
                 style: ElevatedButton.styleFrom(
                   shadowColor: Colors.green,
                   shape: RoundedRectangleBorder(

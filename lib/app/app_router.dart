@@ -14,7 +14,7 @@ class WalletPages {
   static const String createWallet = '/auth/create/wallet';
   static const String authLanding = '/auth/landing';
   static const String createPin = '/auth/create/pin';
-  static const String consent = '/auth/consent';
+  static const String import = '/auth/import/wallet';
   static const String seedPhrase = '/auth/seedPhrase';
   static const String home = '/home';
   static const String confirmSeedPhrase = '/auth/confirmSeedPhrase';
@@ -41,9 +41,9 @@ class AppRouter {
           builder: (_) => CreatePinPage(mnemonics: args as String),
           fullscreenDialog: true,
         );
-      case WalletPages.consent:
+      case WalletPages.import:
         return platformPageRoute<dynamic>(
-          builder: (_) => const ConsentPage(),
+          builder: (_) =>   ImportWalletPage(),
         );
       case WalletPages.seedPhrase:
         return platformPageRoute<dynamic>(

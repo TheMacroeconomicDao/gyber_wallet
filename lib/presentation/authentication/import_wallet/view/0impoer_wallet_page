@@ -1,0 +1,104 @@
+
+import 'package:flutter/material.dart';
+
+class ImportWalletScreen extends StatefulWidget {
+  @override
+  _ImportWalletScreenState createState() => _ImportWalletScreenState();
+}
+
+class _ImportWalletScreenState extends State<ImportWalletScreen> {
+  final TextEditingController seedPhraseController = TextEditingController();
+  bool isImporting = false;
+  bool importSuccess = false;
+  late String errorText;
+
+  Future<void> _importWallet() async {
+    if(seedPhraseController.text.isEmpty) {
+      setState(() {
+        errorText = 'Please enter a seed phrase';
+      });
+      return;
+    }
+    setState(() {
+      isImporting = true;
+       errorText;
+    });
+
+    // Here should be the real logic of importing a crypto wallet
+    await Future.delayed(Duration(seconds: 2)); // Simulation of delay
+
+    setState(() {
+      isImporting = false;
+      importSuccess = true;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Import Crypto Wallet'),
+      ),
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'Enter the seed phrase to import the crypto wallet:',
+                style: TextStyle(fontSize: 18.0),
+              ), ты н
+              SizedBox(height: 16.0),
+              TextField(
+                controller: seedPhraseController,
+                decoration: InputDecoration(
+                  labelText: 'Seed Phrase',
+                  border: OutlineInputBorder(),
+                  errorText: errorText,
+                ),
+              ),
+              SizedBox(height: 16.0),
+              AnimatedSwitcher(
+                duration: Duration(milliseconds: 300),
+                child: _buildButton(),
+              ),
+              SizedBox(height: 16.0),
+              if (importSuccess)
+                Text(
+                  'Wallet successfully imported!',
+                  style: TextStyle(
+                    fontSize: 18.0,
+                    color: Colors.green,
+                  ),
+                ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildButton() {
+    if (isImporting) {
+      return CircularProgressIndicator();
+    } else if (importSuccess) {
+      return Icon(
+        Icons.check_circle,
+        color: Colors.green,
+        size: 48.0,
+      );
+    } else {
+      return ElevatedButton(
+        onPressed: _importWallet,
+        child: Text('Import'),
+      );
+    }
+  }
+}
+
+void main() {
+  runApp(MaterialApp(
+    home: ImportWalletScreen(),
+  ));
+}

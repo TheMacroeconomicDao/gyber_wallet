@@ -59,7 +59,7 @@ class _SeedPhrasePageState extends State<SeedPhrasePage> {
                 '''Write down these 12 words in the correct order and keep them in a safe place''',
                 style: CsTextStyle.overline.copyWith(color: CsColors.white),
               ),
-              SizedBox(height: context.minBlockVertical * 3),
+              SizedBox(height: context.minBlockVertical * 2),
               DottedBorder(
                 borderType: BorderType.RRect,
                 dashPattern: const [10, 5],
